@@ -1,6 +1,13 @@
 OuterPersona::Application.routes.draw do
+  
+  root :to => 'store#index', :via => :get
+  match 'store/:id' => 'store#show', :as => :store_product, :via => :get  
+  
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+  
+
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
