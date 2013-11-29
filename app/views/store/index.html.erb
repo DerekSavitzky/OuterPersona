@@ -1,2 +1,16 @@
-<h1>Store#index</h1>
-<p>Find me in app/views/store/index.html.erb</p>
+<h1>Outer Persona!</h1>
+
+<% @products.each do |product| %>
+<section class="product">
+  <h2><%= product.name %></h2>
+  <div>
+    <%= image_tag product.image, :width => '250' %>
+  </div>
+  <div class="description">
+    <%= product.description %>
+  </div>
+  <p class="price">
+    <%= product.price %>
+  </p>
+</section>
+<% end %>
