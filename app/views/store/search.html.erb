@@ -2,5 +2,6 @@
 
 <%= form_tag search_results_path do %>
   <%= text_field_tag :keywords %>
+  <%= select_tag :category, options_from_collection_for_select(@category, "id", "name"), :prompt => "All" %>
   <%= submit_tag 'Search' %>
 <% end %>

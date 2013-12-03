@@ -3,7 +3,7 @@ OuterPersona::Application.routes.draw do
   root :to => 'store#index', :via => :get
   match 'search' => 'store#search', :as => 'search', :via => :get
   
-  match 'products/:id' => 'store#show', :as => 'product', :via => :get
+  match 'store/:id' => 'store#show', :as => 'store_product', :via => :get
   match 'search_results' => 'store#search_results', :as => 'search_results', :via => :post
   
   devise_for :admin_users, ActiveAdmin::Devise.config
