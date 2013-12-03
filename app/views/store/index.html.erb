@@ -1,7 +1,6 @@
 <h1>Outer Persona!</h1>
-
-<% @products.each do |product| %>
 <div class="contain">
+<% @products.each do |product| %>
   <section class="product">
     <h3><%= product.name %></h3>
     <div>
@@ -14,5 +13,5 @@
       <%= product.price %>
     </p>
   </section>
-</div>
 <% end %>
+</div>

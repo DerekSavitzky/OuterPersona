@@ -1,0 +1,17 @@
+<h2>Search Results</h2>
+
+
+<% @products.each do |product| %>
+  <section class="product">
+    <h3><%= product.name %></h3>
+    <div>
+      <%= image_tag product.image, :width => '250' %>
+    </div>
+    <div class="description">
+      <%= product.description %>
+    </div>
+    <p class="price">
+      <%= product.price %>
+    </p>
+  </section>
+<% end %>
