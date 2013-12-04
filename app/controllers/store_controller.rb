@@ -13,6 +13,14 @@ class StoreController < ApplicationController
     #no code is required here
   end #Automatically loads app/views/store/search.html.erb
   
+  def guys_results
+    @guys = Product.where(:category_id => 2)
+  end
+  
+  def gals_results
+    @guys = Product.where(:category_id => 3)
+  end
+  
   def search_results
     if params[:category].empty?
       @products = Product.where("name LIKE ? OR Description LIKE ?", "%#{params[:keywords]}%", "%#{params[:keywords]}%")
