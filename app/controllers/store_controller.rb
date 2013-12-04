@@ -18,7 +18,7 @@ class StoreController < ApplicationController
   end
   
   def gals_results
-    @guys = Product.where(:category_id => 3)
+    @gals = Product.where(:category_id => 3)
   end
   
   def search_results
