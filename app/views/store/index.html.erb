@@ -2,7 +2,7 @@
 <div class="contain">
 <% @products.each do |product| %>
   <section class="product">
-    <h3><%= link_to product.name, store_product_path(product)  %></h3>
+    <p class="title"><%= link_to product.name, store_product_path(product)  %></p>
     <div>
       <%= image_tag product.image, :width => '250' %>
     </div>
@@ -10,7 +10,7 @@
       <%= product.description %>
     </div>
     <p class="price">
-      <%= product.price %>
+      Price: $<%= product.price %>
     </p>
   </section>
 <% end %>

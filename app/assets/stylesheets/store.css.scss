@@ -7,12 +7,20 @@ body{
     background-color: grey;
 }
 
+.searchbar{
+    margin-top: 12px;
+
+}
 
 .product{
     border: solid black 1px;
     margin: 5px;
-    width: 253px;
+    width: 252px;
     float: left;
+        .title{
+            text-align: center;
+            font-weight: bold;
+        }
     
     background-color: white;
 }
@@ -20,4 +28,11 @@ body{
 .contain{
     width: 900px;
     margin: 50px;
+}
+
+.productshow{
+        border: solid black 1px;
+    margin: 5px;
+    width: 600px;
+    background-color: white;
 }

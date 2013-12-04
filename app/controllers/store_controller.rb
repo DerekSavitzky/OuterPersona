@@ -15,7 +15,7 @@ class StoreController < ApplicationController
   
   def search_results
     if params[:category].empty?
-      @products = Product.where("name LIKE ?", "%#{params[:keywords]}%")
+      @products = Product.where("name LIKE ? OR Description LIKE ?", "%#{params[:keywords]}%", "%#{params[:keywords]}%")
     else 
       @products = Product.where("category_id = ? AND name LIKE ?", "#{params[:category]}", "%#{params[:keywords]}%")
     end
