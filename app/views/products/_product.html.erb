@@ -1,0 +1,12 @@
+<section class="product">
+    <p class="title"><%= link_to product.name, store_product_path(product)  %></p>
+    <div>
+      <%= image_tag product.image, :width => '250' %>
+    </div>
+    <div class="description">
+      <%= product.description %>
+    </div>
+    <p class="price">
+      Price: $<%= product.price %>
+    </p>
+</section>
